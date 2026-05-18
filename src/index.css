@@ -1,0 +1,118 @@
+:root {
+  --bg-color: #0d0d0d;
+  --surface-color: #1a1a1a;
+  --primary-color: #ff3d00;
+  --secondary-color: #ffd600;
+  --accent-blue: #0044ff;
+  --accent-red: #c51104;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Eye Logo Animation */
+@keyframes blink {
+  0%, 96%, 98% { transform: scaleY(1); }
+  97% { transform: scaleY(0.1); }
+}
+
+.eye-logo {
+  animation: blink 4s infinite;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+}
+
+/* Video Embed Layout inside Category Pages */
+.video-wrapper-section {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.video-wrapper-section.with-images {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.video-wrapper-section.without-images {
+  margin-bottom: 4rem;
+  margin-top: 0;
+}
+
+.video-iframe-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.video-iframe-container.has-top-margin {
+  margin-top: 3rem;
+}
+
+.video-iframe-container iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+  .video-wrapper-section {
+    padding: 0 1rem;
+  }
+  .video-iframe-container iframe {
+    border-radius: 8px;
+  }
+  .video-iframe-container.has-top-margin {
+    margin-top: 1.5rem;
+  }
+}

@@ -14,13 +14,6 @@ export default function Footer() {
       <div className="footer-content">
         <div className="footer-grid">
           <div className="footer-brand-section">
-            <div className="footer-eye-logo" style={{ marginBottom: '2rem' }}>
-              <div className="eye-outer">
-                <div className="eye-iris">
-                  <div className="eye-pupil"></div>
-                </div>
-              </div>
-            </div>
             <h3 className="footer-mission">Bringing dynamic stories to life frame by frame.</h3>
           </div>
           
